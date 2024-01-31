@@ -1,0 +1,108 @@
+---
+layout: default
+title: Published Adversarial Example Defenses
+---
+
+<p class="text-center" style="font-size: 1.25rem;">
+This list contains published differentially private computer vision methods that
+have been open-sourced, along with third-party verifications.
+</p>
+
+<!-- <p style="font-size: 1.25rem;"><strong>
+Submit a new <a href="https://github.com/robust-ml/robust-ml.github.io/issues/new?template=submit-defense.md">defense</a> or <a href="https://github.com/robust-ml/robust-ml.github.io/issues/new?template=submit-analysis.md">analysis</a>.
+</strong></p> -->
+
+<div id="leaderboard" class="text-center" style="font-size: 1.25rem;">
+    <div class="heading">
+      <u>
+        Available Leaderboards
+      </u>
+    </div>
+    <a class="btn btn-secondary" href="#CIFAR-10_heading">CIFAR-10</a>
+    <a class="btn btn-secondary" href="#FMNIST_heading">FMNIST</a>
+    <a class="btn btn-secondary" href="#MNIST_heading">MNIST</a>
+    <a class="btn btn-secondary" href="#IMAGENET_heading">ImageNet-1K</a>
+    <a class="btn btn-secondary" href="#ImageNet_CIFAR-10_heading">CIFAR-10 (with Public ImageNet-1K)</a>
+    <a class="btn btn-secondary" href="#ImageNet_CIFAR-100_heading">CIFAR-100 (with Public ImageNet-1K)</a>
+    <a class="btn btn-secondary" href="#JFT4_IMAGENET_heading">ImageNet-1K (with Public JFT4B)</a>
+    <a class="btn btn-secondary" href="#JFT300M_Places365_heading">Places365 (with Public JFT300M)</a>
+    <!-- <a class="btn btn-secondary" href="#ImageNet_CheXpert_heading">ImageNet-CheXpert</a> -->
+</div>
+
+<section class="container" id="MNIST_heading"></section>
+  <p class="text-center" style="font-size: 1.25rem;">
+    MNIST
+  </p>
+  {% include table.html id="MNIST" src=site.data.MNIST published=true %}
+</section>
+
+<section class="container" id="FMNIST_heading"></section>
+  <p class="text-center" style="font-size: 1.25rem;">
+    FMNIST
+  </p>
+  {% include table.html id="FMNIST" src=site.data.Fashion-MNIST published=true %}
+</section>
+
+
+<section class="container" id="CIFAR-10_heading"></section>
+  <p class="text-center" style="font-size: 1.25rem;">
+    CIFAR-10
+  </p>
+  {% include table.html id="CIFAR-10" src=site.data.CIFAR10 published=true %}
+</section>
+
+<section class="container" id="IMAGENET_heading"></section>
+  <p class="text-center" style="font-size: 1.25rem;">
+    ImageNet-1K
+  </p>
+  {% include table.html id="IMAGENET" src=site.data.ImageNet published=true %}
+</section>
+
+<section class="container" id="ImageNet_CIFAR-10_heading"></section>
+  <p class="text-center" style="font-size: 1.25rem;">
+    CIFAR-10 (with Public ImageNet-1K)
+  </p>
+  {% include table.html id="ImageNet_CIFAR-10" src=site.data.ImageNet-CIFAR10 published=true %}
+</section>
+
+<section class="container" id="ImageNet_CIFAR-100_heading"></section>
+  <p class="text-center" style="font-size: 1.25rem;">
+    CIFAR-100 (with Public ImageNet-1K)
+  </p>
+  {% include table.html id="ImageNet_CIFAR-100" src=site.data.ImageNet-CIFAR100 published=true %}
+</section>
+
+<section class="container" id="JFT4_IMAGENET_heading"></section>
+  <p class="text-center" style="font-size: 1.25rem;">
+    ImageNet-1K (with Public JFT4B)
+  </p>
+  {% include table.html id="JFT4_IMAGENET" src=site.data.JFT4B-ImageNet published=true %}
+</section>
+
+<section class="container" id="JFT300M_Places365_heading"></section>
+  <p class="text-center" style="font-size: 1.25rem;">
+    ImageNet-1K (with Public JFT300M)
+  </p>
+  {% include table.html id="JFT300M_Places365" src=site.data.JFT300M-Places365 published=true %}
+</section>
+
+<!-- <section class="container" id="ImageNet_CheXpert_heading"></section>
+  <p class="text-center" style="font-size: 1.25rem;">
+    ImageNet_CheXpert
+  </p>
+  {% include table.html id="ImageNet_CheXpert" src=site.data.ImageNet-CheXpert published=true %}
+</section> -->
+  
+<script>
+  $(document).ready(function() {
+    initializeDataTable("MNIST");
+    initializeDataTable("FMNIST");
+    initializeDataTable("CIFAR-10");
+    initializeDataTable("IMAGENET")
+    initializeDataTable("ImageNet_CIFAR-10");
+    initializeDataTable("ImageNet_CIFAR-100");
+    initializeDataTable("JFT4_IMAGENET");
+    initializeDataTable("JFT300M_Places365");
+    // initializeDataTable("ImageNet_CheXpert");
+  });
+</script>
