@@ -1,0 +1,24 @@
+# Settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge
+permalink: pretty
+future: true
+timezone: America/New_York
+url: ""
+title: "Robust ML"
+logo: /assets/thumbnail.png
+description: "A community-run reference for state-of-the-art adversarial example defenses."
+
+# Excludes
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
+plugins_dir:
+  - "jekyll-github-metadata"
