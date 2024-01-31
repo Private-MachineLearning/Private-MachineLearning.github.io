@@ -1,0 +1,59 @@
+-
+  name: Differentially Private Learning Needs Better Features (or Much More Data)
+  url: https://arxiv.org/abs/2011.11660
+  authors: Tramèr and Boneh
+  code: https://github.com/ftramer/Handcrafted-DP
+  venue: 	ICLR 2021
+  venue_date: 2021-05-03
+  claims:
+    - model: ScatterNet+linear
+      epsilon: 1.2 
+      delta: 1e-5
+      private_accuracy: 98.1%
+      dp_accountant: Opacus RDP
+    - model: ScatterNet+linear
+      epsilon: 2 
+      delta: 1e-5
+      private_accuracy: 98.5%
+      dp_accountant: Opacus RDP
+    - model: ScatterNet+linear
+      epsilon: 2.32 
+      delta: 1e-5
+      private_accuracy: 98.6%
+      dp_accountant: Opacus RDP
+    - model: ScatterNet+linear
+      epsilon: 2.5 
+      delta: 1e-5
+      private_accuracy: 98.7%
+      dp_accountant: Opacus RDP
+    - model: ScatterNet+linear
+      epsilon: 2.93 
+      delta: 1e-5
+      private_accuracy: 98.7%
+      dp_accountant: Opacus RDP
+
+    - model: ScatterNet+CNN
+      epsilon: 1.2 
+      delta: 1e-5
+      private_accuracy: 97.8%
+      dp_accountant: Opacus RDP
+    - model: ScatterNet+CNN
+      epsilon: 2 
+      delta: 1e-5
+      private_accuracy:  98.4%
+      dp_accountant: Opacus RDP
+    - model: ScatterNet+CNN
+      epsilon: 2.32 
+      delta: 1e-5
+      private_accuracy: 98.5%
+      dp_accountant: Opacus RDP
+    - model: ScatterNet+CNN
+      epsilon: 2.5 
+      delta: 1e-5
+      private_accuracy: 98.6%
+      dp_accountant: Opacus RDP
+    - model: ScatterNet+CNN
+      epsilon: 2.93 
+      delta: 1e-5
+      private_accuracy: 98.7%
+      dp_accountant: Opacus RDP

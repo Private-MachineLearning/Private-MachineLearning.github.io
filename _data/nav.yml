@@ -1,0 +1,6 @@
+- name: Home
+  url: /
+- name: Computer Vision
+  url: /DP-CV/
+- name: FAQ
+  url: /faq/

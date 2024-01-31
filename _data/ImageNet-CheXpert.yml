@@ -1,0 +1,53 @@
+# TODO include MagNet once there is a robustml implementation for it
+#-
+  #name: "MagNet: a Two-Pronged Defense against Adversarial Examples"
+  #url: https://arxiv.org/abs/1705.09064
+  #authors: Meng & Chen
+  #code: https://github.com/Trevillie/MagNet
+  #venue: CCS 2017
+  #venue_date: 2017-10-30
+  #dataset: CIFAR-10
+  #threat_model: $$\ell_2 (\epsilon = 0.5)$$
+  #natural: 91% accuracy
+  #claims: >
+    #83% accuracy (on images originally classified correctly)
+  #analyses:
+    #- claims: 0% accuracy
+      #citation: CW17
+      #url: https://arxiv.org/abs/1711.08478
+      #code: https://github.com/carlini/MagNet
+# TODO include Efficient Defenses once there is a robustml implementation for it
+#-
+  #name: "Efficient Defenses Against Adversarial Attacks"
+  #url: https://arxiv.org/abs/1707.06728
+  #authors: Zantedeschi et al.
+  #code: https://github.com/carlini/breaking_efficient_defenses
+  #venue: AISec 2017
+  #venue_date: 2017-11-03
+  #dataset: CIFAR-10
+  #threat_model: $$\ell_2 (\epsilon = \text{unspecified})$$
+  #natural: 75% accuracy
+  #claims: >
+    #60% accuracy
+  #analyses:
+    #- claims: 0% accuracy
+      #citation: CW17
+      #url: https://arxiv.org/abs/1711.08478
+      #code: https://github.com/carlini/breaking_efficient_defenses
+-
+  name: Distillation as a Defense to Adversarial Perturbations against Deep Neural Networks
+  url: https://arxiv.org/abs/1511.04508
+  authors: Papernot et al.
+  code: https://github.com/lengstrom/defensive-distillation
+  venue: S&P 2016
+  venue_date: 2016-05-23
+  claims:
+    - epsilon: $$\ell_0 (\epsilon = 112)$$
+      delta: 99.51% accuracy
+      private_accuracy: 0.45% adversary success rate in changing classifier's prediction
+      dp_accountant: PRV
+      verification:
+        - claim: 3.6% accuracy
+          citation: CW16
+          url: https://arxiv.org/abs/1608.04644
+          code: https://github.com/lengstrom/defensive-distillation

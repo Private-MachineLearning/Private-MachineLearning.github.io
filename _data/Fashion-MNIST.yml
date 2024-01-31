@@ -1,0 +1,38 @@
+-
+  name: Differentially Private Learning Needs Better Features (or Much More Data)
+  url: https://arxiv.org/abs/2011.11660
+  authors: Tramèr and Boneh
+  code: https://github.com/ftramer/Handcrafted-DP
+  venue: 	ICLR 2021
+  venue_date: 2021-05-03
+  claims:
+    - model: ScatterNet+linear
+      epsilon: 2.7
+      delta:  1e-5
+      private_accuracy: 89.5%
+      dp_accountant: Opacus RDP
+      analyses:
+        # - claim: 3.6% accuracy
+        #   citation: CW16
+        #   url: https://arxiv.org/abs/1608.04644
+        #   code: https://github.com/lengstrom/defensive-distillation
+    - model: ScatterNet+linear
+      epsilon: 3
+      delta:  1e-5
+      private_accuracy: 89.7%
+      dp_accountant: Opacus RDP
+      analyses:
+        # - claim: 3.6% accuracy
+        #   citation: CW16
+        #   url: https://arxiv.org/abs/1608.04644
+        #   code: https://github.com/lengstrom/defensive-distillation
+    - model: ScatterNet+CNN
+      epsilon: 2.7
+      delta:  1e-5
+      private_accuracy: 88.7%
+      dp_accountant: Opacus RDP
+    - model: ScatterNet+CNN
+      epsilon: 3
+      delta:  1e-5
+      private_accuracy: 89.0%
+      dp_accountant: Opacus RDP
