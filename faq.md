@@ -90,8 +90,8 @@ language processing. If you have novel ideas for other domains, please open an [
 <!-- This website is [open-source][source]. Please open an [issue][issues] or submit
 a [pull request][pulls] with proposed changes. -->
 
-## What does $\varepsilon = 0$ mean?
-$\varepsilon = 0$ indicates zero-shot performance on the dataset, meaning no privacy was compromised on the private data, as the model was neither trained nor fine-tuned on it.
+## What does  &#949; = 0 mean?
+ &#949; = 0 indicates zero-shot performance on the dataset, meaning no privacy was compromised on the private data, as the model was neither trained nor fine-tuned on it.
 
 <!-- ## How is this website maintained?
 
