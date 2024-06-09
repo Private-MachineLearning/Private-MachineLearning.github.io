@@ -5,9 +5,9 @@ title: FAQ
 
 # FAQ
 
-<!-- ## Which defenses are included?
+<!-- ## Which datasets are included? -->
 
-Currently, we list defenses that are claimed to be secure in the white-box
+<!-- Currently, we list defenses that are claimed to be secure in the white-box
 model. Defenses that only aim to be secure in an oblivious attacker / black-box
 / grey-box model, but not in a white-box model, are out of scope. It is unclear
 how to properly evaluate such defenses, as it is challenging to model lack of
@@ -28,9 +28,21 @@ evaluation of attacks.
 We maintain two lists: one for [published defenses][defenses] and one for
 [unpublished defenses][preprints]. Both contain defenses for the white-box
 threat model that are open-source, implement the robustml API, and have
-pre-trained models available.
+pre-trained models available. -->
 
-## How are new defenses added to the list?
+## What is the structure of the tables for each fine-tuning dataset?
+
+For each private dataset, we consider the following very common scenarios:
+
+1. **No Public Data:** Models in this category do not use any publicly available data for pretraining.
+
+2. **Public IN1K (ImageNet 1K):** This scenario explicitly considers models that are pretrained using the widely adopted ImageNet 1K as a backbone for various architectures.
+
+3. **Public DC-2B:** This setting focuses on models pretrained on the DataComp-2B dataset, particularly notable due to its use in prominent CLIP Vit models.
+
+4. **Anything Goes:** This setting encompasses any form of pretraining that uses datasets not previously mentioned.
+
+<!-- ## How are new defenses added to the list?
 
 Defenses must be open-sourced, implement the robustml API, and have a
 pre-trained model available to be eligible to be added to the list. See
@@ -64,23 +76,24 @@ papers. If you wish to add a new threat model, please open an [issue][issues].
 
 We include the datasets [defined in the robustml framework][datasets]
 (currently MNIST, Fashion-MNIST, CIFAR-10, GTS, and ImageNet ILSVRC 2012). If
-you wish to add a new dataset, please open an [issue][issues].
+you wish to add a new dataset, please open an [issue][issues]. -->
 
-## Why only vision?
+## Why only vision? why only classification?
 
-We currently only list defenses for computer vision because it is the most well
-studied setting as of now. Consequently, this is a natural domain for comparing
-various methods. We are, however, open to - and, in fact, encourage - work in
-formal threat models corresponding to other ML settings. If you have new ideas
-for threat models and datasets to include for non-vision defenses, please open
-an [issue][issues].
+At present, we only document methods for differentially private image classification, 
+as this is the most extensively researched area. Nonetheless, we welcome and encourage 
+contributions in other machine learning domains, including but not limited to natural 
+language processing. If you have novel ideas for other domains, please open an [issue][issues].
 
 ## How do I submit an update?
 
-This website is [open-source][source]. Please open an [issue][issues] or submit
-a [pull request][pulls] with proposed changes.
+<!-- This website is [open-source][source]. Please open an [issue][issues] or submit
+a [pull request][pulls] with proposed changes. -->
 
-## How is this website maintained?
+## What does $\varepsilon = 0$ mean?
+$\varepsilon = 0$ indicates zero-shot performance on the dataset, meaning no privacy was compromised on the private data, as the model was neither trained nor fine-tuned on it.
+
+<!-- ## How is this website maintained?
 
 This is a community-maintained website, open-source on [GitHub][source]. All
 updates to the site are [auditable][commits], and all discussions related to
@@ -101,16 +114,16 @@ provides a useful overview of the relative power of known attacks and defenses.
 However, due to its focus on evaluating defenses only on known, static attacks,
 it might not necessarily reflect the actual progress on the defense front.
 After all, defenses often appear effective by resisting all previously known
-attacks but can be completely bypassed by new, adaptive ones.
+attacks but can be completely bypassed by new, adaptive ones. -->
 
-[source]: https://github.com/robust-ml/robust-ml.github.io
+<!-- [source]: https://github.com/robust-ml/robust-ml.github.io
 [commits]: https://github.com/robust-ml/robust-ml.github.io/commits/master
 [defenses]: /defenses/
 [preprints]: /preprints/
 [robustml]: https://github.com/robust-ml/robustml
-[instructions]: https://github.com/robust-ml/robustml#usage
-[issues]: https://github.com/robust-ml/robust-ml.github.io/issues
-[pulls]: https://github.com/robust-ml/robust-ml.github.io/pulls
+[instructions]: https://github.com/robust-ml/robustml#usage -->
+[issues]: https://github.com/Private-MachineLearning/Private-MachineLearning.github.io/issues
+<!-- [pulls]: https://github.com/robust-ml/robust-ml.github.io/pulls
 [threat models]: https://github.com/robust-ml/robustml/blob/master/robustml/threat_model.py
 [datasets]: https://github.com/robust-ml/robustml/blob/master/robustml/dataset.py
 [attack]: https://github.com/robust-ml/robustml/blob/master/robustml/attack.py
