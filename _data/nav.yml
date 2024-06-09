@@ -1,6 +1,6 @@
 - name: Home
   url: /
-- name: Computer Vision
+- name: Image Classification
   url: /DP-CV/
 - name: FAQ
   url: /faq/
