@@ -1,0 +1,13 @@
+- 
+  name: Unlocking High-Accuracy Differentially Private Image Classification through Scale
+  url: https://arxiv.org/abs/2204.13650
+  authors: De et al.
+  code: https://github.com/google-deepmind/jax_privacy/
+  venue: arXiv, Apr. 2022
+  venue_date: 2022-04-28
+  claims:
+    - model: NF-ResNets
+      epsilon: 8
+      delta: 8e-7
+      private_accuracy: 32.4% 
+      dp_accountant: TFP RDP
