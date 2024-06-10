@@ -45,6 +45,8 @@ For each private dataset, we consider the following very common scenarios:
 ## Should everything be open-sourced?
  
 Ideally, you should open-source everything, including public data, your code, and the weights. However, we understand that some data might be proprietary and therefore not publicly available, which would also restrict the availability of the weights. In such cases, it is still recommended to make the code available. There might be other valid reasons for not publicizing some components, but generally, it is expected to publish all the above.
+
+
 <!-- ## How are new defenses added to the list?
 
 Defenses must be open-sourced, implement the robustml API, and have a
@@ -90,20 +92,37 @@ language processing. If you have novel ideas for other domains, please open an [
 
 ## How do I submit an update?
 
-<!-- This website is [open-source][source]. Please open an [issue][issues] or submit
-a [pull request][pulls] with proposed changes. -->
+This website is [open-source][source]. Please open an [issue][issues] or submit
+a [pull request][pulls] with proposed changes.
 
 ## What does  &#949; = 0 mean?
- &#949; = 0 indicates zero-shot performance on the dataset, meaning no privacy was compromised on the private data, as the model was neither trained nor fine-tuned on it. Please note that in this case, the accountant is not applicable (N/A) since no privacy budget was actually consumed.
+&#949; = 0 indicates zero-shot performance on the dataset, meaning no privacy was compromised on the private data, as the model was neither trained nor fine-tuned on it. Please note that in this case, the accountant is not applicable (N/A) since no privacy budget was actually consumed.
 
-<!-- ## How is this website maintained?
+## Why do some models on the leaderboard only have a general label like 'CNN' or 'DNN'?
+If the architecture is explicitly mentioned in the paper or code, it is specified in the leaderboard. However, note that while a name is listed, for full architectural details, one must refer to the related paper or code. If the model is not a widely known architecture, a more general term like 'CNN' or 'DNN' is used. This indicates that the architecture is a combination of layers described in the paper, or it is not mentioned at all.
+
+## How is this website maintained?
 
 This is a community-maintained website, open-source on [GitHub][source]. All
 updates to the site are [auditable][commits], and all discussions related to
 content are also publicly visible (as GitHub [issues][issues] / [pull
 requests][pulls]).
 
+
 ## How is this different from the other existing resources on robust ML?
+
+
+[paperswithcode][paperswithcode] is an open-source leaderboard that keeps track of
+SOTA datasets and benchmarks. However, due to the specifics of DP settings, 
+integrating results into a traditional non-private leaderboard isn't straightforward.
+A DP ML leaderboard must consider various factors, including privacy parameters ($`\varepsilon, \delta`$), 
+the privacy accountant used, and the public datasets involved. Unlike the non-private setting, 
+DP requires mathematical proof of its guarantees. A result could be invalid if there is a bug in the proof. 
+This adds to the existing concerns about the reproducibility of results. 
+Given the complexity and the high risk of errors in DP proofs, our leaderboard includes a verification system to ensure correctness.
+
+
+<!--## How is this different from the other existing resources on robust ML?
 
 [CleverHans][cleverhans] is a library providing open-source implementations of
 various known attack methods. This is an important resource that provides us
@@ -119,17 +138,18 @@ it might not necessarily reflect the actual progress on the defense front.
 After all, defenses often appear effective by resisting all previously known
 attacks but can be completely bypassed by new, adaptive ones. -->
 
-<!-- [source]: https://github.com/robust-ml/robust-ml.github.io
-[commits]: https://github.com/robust-ml/robust-ml.github.io/commits/master
-[defenses]: /defenses/
+[source]: https://github.com/Private-MachineLearning/Private-MachineLearning.github.io
+[commits]: https://github.com/Private-MachineLearning/Private-MachineLearning.github.io/commits/main/
+<!-- [defenses]: /defenses/
 [preprints]: /preprints/
 [robustml]: https://github.com/robust-ml/robustml
 [instructions]: https://github.com/robust-ml/robustml#usage -->
 [issues]: https://github.com/Private-MachineLearning/Private-MachineLearning.github.io/issues
-<!-- [pulls]: https://github.com/robust-ml/robust-ml.github.io/pulls
-[threat models]: https://github.com/robust-ml/robustml/blob/master/robustml/threat_model.py
+[pulls]: https://github.com/Private-MachineLearning/Private-MachineLearning.github.io/pulls
+<!--[threat models]: https://github.com/robust-ml/robustml/blob/master/robustml/threat_model.py
 [datasets]: https://github.com/robust-ml/robustml/blob/master/robustml/dataset.py
 [attack]: https://github.com/robust-ml/robustml/blob/master/robustml/attack.py
 [run]: https://github.com/robust-ml/robustml/blob/master/robustml/evaluate.py
 [cleverhans]: https://github.com/tensorflow/cleverhans
 [robust vision]: https://robust.vision/ -->
+[paperswithcode]: https://paperswithcode.com/sota
