@@ -42,6 +42,9 @@ For each private dataset, we consider the following very common scenarios:
 
 4. **Anything Goes:** This setting encompasses any form of pretraining that uses datasets not previously mentioned.
 
+## Should everything be open-sourced?
+ 
+Ideally, you should open-source everything, including public data, your code, and the weights. However, we understand that some data might be proprietary and therefore not publicly available, which would also restrict the availability of the weights. In such cases, it is still recommended to make the code available. There might be other valid reasons for not publicizing some components, but generally, it is expected to publish all the above.
 <!-- ## How are new defenses added to the list?
 
 Defenses must be open-sourced, implement the robustml API, and have a
@@ -91,7 +94,7 @@ language processing. If you have novel ideas for other domains, please open an [
 a [pull request][pulls] with proposed changes. -->
 
 ## What does  &#949; = 0 mean?
- &#949; = 0 indicates zero-shot performance on the dataset, meaning no privacy was compromised on the private data, as the model was neither trained nor fine-tuned on it.
+ &#949; = 0 indicates zero-shot performance on the dataset, meaning no privacy was compromised on the private data, as the model was neither trained nor fine-tuned on it. Please note that in this case, the accountant is not applicable (N/A) since no privacy budget was actually consumed.
 
 <!-- ## How is this website maintained?
 
