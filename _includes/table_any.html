@@ -25,7 +25,7 @@
             {% else %}
               <td data-sort="{{ row.upload_date }}">
             {% endif %}
-              <a href="{{ row.url }}">{{ row.name }}</a> ({{ row.authors }}) (<a href="{{ row.code }}">code</a>)
+              <a href="{{ row.url }}">{{ row.name }}</a> (<a href="{{ row.code }}">code</a>)
             </td>
             {% if include.published %}
               <td>{{ row.venue }}</td>
