@@ -75,3 +75,18 @@
       delta:  1e-5
       private_accuracy: 81.4%
       dp_accountant: TFP RDP
+
+- 
+  name: Rethinking Benchmarks for Differentially Private Image Classification
+  url: N/A
+  authors: Mokhtari, Kodeiri, Mohaptra, et al.
+  code: N/A
+  venue: NeuralIPS, 2024 (Submitted)
+  venue_date: 2024-06-08
+  claims:
+    - 
+      model: ScatterNet + CNN
+      epsilon: 3
+      delta:  1e-05
+      private_accuracy: 55.18% AUC
+      dp_accountant: Torch PRV
