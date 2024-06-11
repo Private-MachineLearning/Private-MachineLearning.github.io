@@ -1,6 +1,6 @@
-- name: Home
-  url: /
 - name: Image Classification
-  url: /DP-CV/
+  url: /
+- name: Maintainers
+  url: /maintainers/
 - name: FAQ
   url: /faq/
