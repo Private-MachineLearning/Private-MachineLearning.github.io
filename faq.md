@@ -75,13 +75,13 @@ can be easily [run][run] against each other.
 
 The threat models listed correspond to models [defined in the robustml
 framework][threat models] and are based on models considered in published
-papers. If you wish to add a new threat model, please open an [issue][issues].
+papers. If you wish to add a new threat model, please open an [issue][issues]. -->
 
 ## Which datasets are considered?
 
-We include the datasets [defined in the robustml framework][datasets]
-(currently MNIST, Fashion-MNIST, CIFAR-10, GTS, and ImageNet ILSVRC 2012). If
-you wish to add a new dataset, please open an [issue][issues]. -->
+Considering which datasets the community views as solved or still having room for improvement, 
+or those in more privacy-sensitive domains, we currently include CIFAR-10, ImageNet, CheXpert, 
+and EyePACS. If you would like to suggest a new dataset, please open an [issue][issues].
 
 ## Why only vision?
 
