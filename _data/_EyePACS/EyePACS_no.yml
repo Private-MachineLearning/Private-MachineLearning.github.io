@@ -1,0 +1,80 @@
+- 
+  name: Rethinking Benchmarks for Differentially Private Image Classification
+  url: N/A
+  authors: Mokhtari, Kodeiri, Mohaptra, et al.
+  code: N/A
+  venue: NeuralIPS, 2024
+  venue_date: 2024-06-08
+  claims:
+    - 
+      model: ScatterNet + CNN
+      epsilon: 1
+      delta:  1e-05
+      private_accuracy: 55.02% AUC
+      dp_accountant: Torch PRV
+    - 
+      model: ScatterNet + CNN
+      epsilon: 3
+      delta:  1e-05
+      private_accuracy: 57.1% AUC
+      dp_accountant: Torch PRV
+    - 
+      model: ScatterNet + CNN
+      epsilon: 5
+      delta:  1e-05
+      private_accuracy: 57.13% AUC
+      dp_accountant: Torch PRV
+    - 
+      model: ScatterNet + CNN
+      epsilon: 8
+      delta:  1e-05
+      private_accuracy: 57.34% AUC
+      dp_accountant: Torch PRV
+    - 
+      model: ScatterNet + Linear
+      epsilon: 1
+      delta:  1e-05
+      private_accuracy: 55.59% AUC
+      dp_accountant: Torch PRV
+    - 
+      model: ScatterNet + Linear
+      epsilon: 3
+      delta:  1e-05
+      private_accuracy: 57.29% AUC
+      dp_accountant: Torch PRV
+    - 
+      model: ScatterNet + Linear
+      epsilon: 5
+      delta:  1e-05
+      private_accuracy: 57.44% AUC
+      dp_accountant: Torch PRV
+    - 
+      model: ScatterNet + Linear
+      epsilon: 8
+      delta:  1e-05
+      private_accuracy: 57.65% AUC
+      dp_accountant: Torch PRV
+    - 
+      model: Wide-ResNet
+      epsilon: 1
+      delta:  1e-05
+      private_accuracy: 55.51% AUC
+      dp_accountant: Torch PRV
+    - 
+      model: Wide-ResNet
+      epsilon: 3
+      delta:  1e-05
+      private_accuracy: 56.49% AUC
+      dp_accountant: Torch PRV
+    - 
+      model: Wide-ResNet
+      epsilon: 5
+      delta:  1e-05
+      private_accuracy: 56.83% AUC
+      dp_accountant: Torch PRV
+    - 
+      model: Wide-ResNet
+      epsilon: 8
+      delta:  1e-05
+      private_accuracy: 57.79% AUC
+      dp_accountant: Torch PRV

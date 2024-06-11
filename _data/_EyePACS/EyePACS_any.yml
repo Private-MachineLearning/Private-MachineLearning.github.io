@@ -1,0 +1,69 @@
+- 
+  name: Rethinking Benchmarks for Differentially Private Image Classification
+  url: N/A
+  authors: Mokhtari, Kodeiri, Mohaptra, et al.
+  code: N/A
+  venue: NeuralIPS, 2024
+  venue_date: 2024-06-08
+  claims:
+    - public_data: LAION-2B
+      model: Vit-G/14 + TLNN 
+      epsilon: 0
+      delta: 0
+      private_accuracy: 50.73% AUC
+      dp_accountant: N/A
+    - public_data: LAION-2B
+      model: Vit-G/14 + TLNN 
+      epsilon: 1
+      delta:  1e-05
+      private_accuracy: 65.47% AUC
+      dp_accountant: Torch PRV
+    - public_data: LAION-2B
+      model: Vit-G/14 + TLNN 
+      epsilon: 3
+      delta:  1e-05
+      private_accuracy: 70.30% AUC
+      dp_accountant: Torch PRV
+    - public_data: LAION-2B
+      model: Vit-G/14 + TLNN 
+      epsilon: 5
+      delta:  1e-05
+      private_accuracy: 71.74% AUC
+      dp_accountant: Torch PRV
+    - public_data: LAION-2B
+      model: Vit-G/14 + TLNN 
+      epsilon: 8
+      delta:  1e-05
+      private_accuracy: 72.3% AUC
+      dp_accountant: Torch PRV
+
+    - public_data: WebImageTex
+      model: Vit-B/16 + TLNN 
+      epsilon: 0
+      delta:  0
+      private_accuracy: 50.73% AUC
+      dp_accountant: N/A
+    - public_data: WebImageTex
+      model: Vit-B/16 + TLNN 
+      epsilon: 1
+      delta:  1e-05
+      private_accuracy: 65.12% AUC
+      dp_accountant: Torch PRV
+    - public_data: WebImageTex
+      model: Vit-B/16 + TLNN 
+      epsilon: 3
+      delta:  1e-05
+      private_accuracy: 67.89% AUC
+      dp_accountant: Torch PRV
+    - public_data: WebImageTex
+      model: Vit-B/16 + TLNN 
+      epsilon: 5
+      delta:  1e-05
+      private_accuracy: 69.22% AUC
+      dp_accountant: Torch PRV
+    - public_data: WebImageTex
+      model: Vit-B/16 + TLNN 
+      epsilon: 8
+      delta:  1e-05
+      private_accuracy: 69.84% AUC
+      dp_accountant: Torch PRV
