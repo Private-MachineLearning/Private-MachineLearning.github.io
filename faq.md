@@ -30,20 +30,20 @@ We maintain two lists: one for [published defenses][defenses] and one for
 threat model that are open-source, implement the robustml API, and have
 pre-trained models available. -->
 
-## What is the structure of the tables for each fine-tuning dataset?
+## What is the structure of the tables for each dataset?
 
 For each private dataset, we consider the following very common scenarios:
 
-1. **No Public Data:** Models in this category do not use any publicly available data for pretraining.
+1. **No Public Data:** Models in this category do not use any public data for pretraining.
 
 2. **Public IN1K (ImageNet 1K):** This scenario explicitly considers models that are pretrained using the widely adopted ImageNet 1K as a backbone for various architectures.
 
-3. **Public DC-2B:** This setting focuses on models pretrained on the DataComp-2B dataset, particularly notable due to its use in prominent CLIP Vit models.
+3. **Public DC-2B:** This setting focuses on models pretrained on the DataComp-2B dataset, particularly notable due to its use in CLIP Vit models.
 
 4. **Anything Goes:** This setting encompasses any form of pretraining that uses datasets not previously mentioned.
 
 ## Should everything be open-sourced?
- 
+
 Ideally, you should open-source everything, including public data, your code, and the weights. However, we understand that some data might be proprietary and therefore not publicly available, which would also restrict the availability of the weights. In such cases, it is still recommended to make the code available. There might be other valid reasons for not publicizing some components, but generally, it is expected to publish all the above.
 
 
@@ -80,7 +80,7 @@ papers. If you wish to add a new threat model, please open an [issue][issues]. -
 ## Which datasets are considered?
 
 Considering which datasets the community views as solved or still having room for improvement, 
-or those in more privacy-sensitive domains, we currently include CIFAR-10, ImageNet, CheXpert, 
+and those in more privacy-sensitive domains, we currently include CIFAR-10, ImageNet, CheXpert, 
 and EyePACS. If you would like to suggest a new dataset, please open an [issue][issues].
 
 ## Why only vision?
@@ -91,15 +91,18 @@ contributions in other machine learning domains, including but not limited to na
 language processing. If you have novel ideas for other domains, please open an [issue][issues].
 
 ## What does  &epsilon; = 0 mean?
+
 &epsilon; = 0 indicates zero-shot performance on the dataset, meaning no privacy was compromised on the private data, as the model was neither trained nor fine-tuned on it. Please note that in this case, the accountant is not applicable (N/A) since no privacy budget was actually consumed.
 
 ## Why do some models on the leaderboard only have a general label like 'CNN' or 'DNN'?
+
 If the paper/code explicitly describes the model or mentions the exact architecture name, 
 it is specified in the leaderboard. However, if the model is not a widely known architecture 
 or it is not quite clear what architecture they have exactly used, a more general term like 'CNN' 
 or 'DNN' is used.
 
-## What does Final Layer/Full after the model name mean?
+## What does (Final Layer)/(Full) after the model name mean?
+
 If only the last layer of the model is fine-tuned, (Final Layer) is used. 
 If it is fully fine-tuned, (Full) is used.
 
