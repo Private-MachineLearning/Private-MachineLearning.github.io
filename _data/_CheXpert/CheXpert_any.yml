@@ -1,0 +1,107 @@
+- 
+  name: Unlocking Accuracy and Fairness in Differentially Private Image Classification
+  url: https://arxiv.org/abs/2308.10888
+  authors: Berrada et al.
+  code: https://github.com/google-deepmind/jax_privacy/
+  venue: arXiv, Dec. 2022
+  venue_date: 2022-12-14
+  claims:
+    - public_data: ImageNet-21K
+      model:  NFNet-F0
+      epsilon: 0.5
+      delta:  4.478e-06
+      private_accuracy: 84.9% AUC
+      dp_accountant: TFP RDP
+    - public_data: ImageNet-21K
+      model:  NFNet-F0
+      epsilon: 1
+      delta:  4.478e-06
+      private_accuracy: 86.3% AUC
+      dp_accountant: TFP RDP
+    - public_data: ImageNet-21K
+      model:  NFNet-F0
+      epsilon: 2
+      delta:  4.478e-06
+      private_accuracy: 87.5% AUC
+      dp_accountant: TFP RDP
+    - public_data: ImageNet-21K
+      model: NFNet-F0
+      epsilon: 4
+      delta:  4.478e-06
+      private_accuracy:  88.4% AUC
+      dp_accountant: TFP RDP
+    - public_data: ImageNet-21K
+      model:  NFNet-F0
+      epsilon: 8
+      delta:  4.478e-06
+      private_accuracy: 89.2% AUC
+      dp_accountant: TFP RDP
+- 
+  name: Rethinking Benchmarks for Differentially Private Image Classification
+  url: N/A
+  authors: Mokhtari, Kodeiri, Mohaptra, et al.
+  code: N/A
+  venue: NeuralIPS, 2024
+  venue_date: 2024-06-08
+  claims:
+    - public_data: LAION-2B
+      model: Vit-G/14 + TLNN 
+      epsilon: 0
+      delta:  0
+      private_accuracy: 59.11% AUC
+      dp_accountant: N/A
+    - public_data: LAION-2B
+      model: Vit-G/14 + TLNN 
+      epsilon: 1
+      delta:  1e-06
+      private_accuracy: 80.63% AUC
+      dp_accountant: Torch PRV
+    - public_data: LAION-2B
+      model: Vit-G/14 + TLNN 
+      epsilon: 3
+      delta:  1e-06
+      private_accuracy: 81.80% AUC
+      dp_accountant: Torch PRV
+    - public_data: LAION-2B
+      model: Vit-G/14 + TLNN 
+      epsilon: 5
+      delta:  1e-06
+      private_accuracy: 82.25% AUC
+      dp_accountant: Torch PRV
+    - public_data: LAION-2B
+      model: Vit-G/14 + TLNN 
+      epsilon: 8
+      delta:  1e-06
+      private_accuracy: 82.27% AUC
+      dp_accountant: Torch PRV
+
+    - public_data: WebImageTex
+      model: Vit-B/16 + TLNN 
+      epsilon: 0
+      delta:  0
+      private_accuracy: 49.75% AUC
+      dp_accountant: N/A
+    - public_data: WebImageTex
+      model: Vit-B/16 + TLNN 
+      epsilon: 1
+      delta:  1e-06
+      private_accuracy: 77.28% AUC
+      dp_accountant: Torch PRV
+    - public_data: WebImageTex
+      model: Vit-B/16 + TLNN 
+      epsilon: 3
+      delta:  1e-06
+      private_accuracy: 78.21% AUC
+      dp_accountant: Torch PRV
+    - public_data: WebImageTex
+      model: Vit-B/16 + TLNN 
+      epsilon: 5
+      delta:  1e-06
+      private_accuracy: 78.33% AUC
+      dp_accountant: Torch PRV
+    - public_data: WebImageTex
+      model: Vit-B/16 + TLNN 
+      epsilon: 8
+      delta:  1e-06
+      private_accuracy: 78.54% AUC
+      dp_accountant: Torch PRV
