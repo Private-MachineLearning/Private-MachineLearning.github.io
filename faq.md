@@ -5,10 +5,15 @@ title: FAQ
 
 # FAQ
 
+## How are new models and methods added to the list?
+
+This website is [open-source][source] and welcomes updates from the community. Please open an [issue][issues] or submit
+a [pull request][pulls] with proposed changes.
+
 
 ## What is the structure of the tables for each dataset?
 
-For each private dataset, we consider the following very common scenarios:
+For each private dataset, we consider the following common scenarios:
 
 1. **No Public Data:** Models in this category do not use any public data for pretraining.
 
@@ -20,18 +25,18 @@ For each private dataset, we consider the following very common scenarios:
 
 ## Should everything be open-sourced?
 
-Ideally, you should open-source everything, including public data, your code, and the weights. However, we understand that some data might be proprietary and therefore not publicly available, which would also restrict the availability of the weights. In such cases, it is still recommended to make the code available. There might be other valid reasons for not publicizing some components, but generally, it is expected to publish all the above.
+Ideally, you should open-source everything, including public data, your code, and the weights. However, we understand that some data may be proprietary and therefore not publicly available, which could also limit the accessibility of the weights. In such cases, it is still recommended to make the code available. While there may be other valid reasons for not releasing certain components, the general expectation is to publish all of the above whenever possible. You can explain all circumstances in the notes of your pull request.
 
 ## Which datasets are considered?
 
 Considering which datasets the community views as solved or still having room for improvement, 
-and those in more privacy-sensitive domains, we currently include CIFAR-10, ImageNet, CheXpert, 
+as well as those in more privacy-sensitive domains, we currently include CIFAR-10, ImageNet, CheXpert, 
 and EyePACS. If you would like to suggest a new dataset, please open an [issue][issues].
 
 ## Why only vision?
 
 At present, we only document methods for differentially private image classification, 
-as this is the most extensively researched area. Nonetheless, we welcome and encourage 
+as it is the most extensively researched area. Nonetheless, we welcome and encourage 
 contributions in other machine learning domains, including but not limited to natural 
 language processing. If you have novel ideas for other domains, please open an [issue][issues].
 
@@ -50,11 +55,6 @@ or 'DNN' is used.
 
 If only the last layer of the model is fine-tuned, (Final Layer) is used. 
 If it is fully fine-tuned, (Full) is used.
-
-## How do I submit an update?
-
-This website is [open-source][source]. Please open an [issue][issues] or submit
-a [pull request][pulls] with proposed changes.
 
 ## How is this website maintained?
 
