@@ -83,23 +83,30 @@ We include the datasets [defined in the robustml framework][datasets]
 (currently MNIST, Fashion-MNIST, CIFAR-10, GTS, and ImageNet ILSVRC 2012). If
 you wish to add a new dataset, please open an [issue][issues]. -->
 
-## Why only vision? why only classification?
+## Why only vision?
 
 At present, we only document methods for differentially private image classification, 
 as this is the most extensively researched area. Nonetheless, we welcome and encourage 
 contributions in other machine learning domains, including but not limited to natural 
 language processing. If you have novel ideas for other domains, please open an [issue][issues].
 
-## How do I submit an update?
-
-This website is [open-source][source]. Please open an [issue][issues] or submit
-a [pull request][pulls] with proposed changes.
-
 ## What does  &epsilon; = 0 mean?
 &epsilon; = 0 indicates zero-shot performance on the dataset, meaning no privacy was compromised on the private data, as the model was neither trained nor fine-tuned on it. Please note that in this case, the accountant is not applicable (N/A) since no privacy budget was actually consumed.
 
 ## Why do some models on the leaderboard only have a general label like 'CNN' or 'DNN'?
-If the architecture is explicitly mentioned in the paper or code, it is specified in the leaderboard. However, note that while a name is listed, for full architectural details, one must refer to the related paper or code. If the model is not a widely known architecture, a more general term like 'CNN' or 'DNN' is used. This indicates that the architecture is a combination of layers described in the paper, or it is not mentioned at all.
+If the paper/code explicitly describes the model or mentions the exact architecture name, 
+it is specified in the leaderboard. However, if the model is not a widely known architecture 
+or it is not quite clear what architecture they have exactly used, a more general term like 'CNN' 
+or 'DNN' is used.
+
+## What does Final Layer/Full after the model name mean?
+If only the last layer of the model is fine-tuned, (Final Layer) is used. 
+If it is fully fine-tuned, (Full) is used.
+
+## How do I submit an update?
+
+This website is [open-source][source]. Please open an [issue][issues] or submit
+a [pull request][pulls] with proposed changes.
 
 ## How is this website maintained?
 
@@ -110,7 +117,6 @@ requests][pulls]).
 
 
 ## How is this different from the other existing resources on robust ML?
-
 
 [paperswithcode][paperswithcode] is an open-source leaderboard that keeps track of
 SOTA datasets and benchmarks. However, due to the specifics of DP settings, 
