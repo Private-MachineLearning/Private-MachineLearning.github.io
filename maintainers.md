@@ -12,4 +12,3 @@ This website provides a public leaderboard for Differential Privacy in Machine L
 Maintainers:
 
 *  Gautam Kamath (UWaterloo)
-*  Sabrina Mokhtari (UWaterloo)
