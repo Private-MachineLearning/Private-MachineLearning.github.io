@@ -30,3 +30,29 @@
       delta:  8e-7
       private_accuracy: 86.7%
       dp_accountant: TFP RDP
+- 
+  name: Reproducible scaling laws for contrastive language-image learning
+  url: https://arxiv.org/abs/2212.07143
+  authors: Mehdi Cherti et al.
+  code: https://github.com/mlfoundations/open_clip
+  venue: CVPR, 2023
+  venue_date: 2023-06-17
+  claims:
+    - public_data: LAION-2B
+      model:  ViT-L/14
+      epsilon: 0
+      delta:  0
+      private_accuracy: 75.3%
+      dp_accountant: N/A
+    - public_data: LAION-2B
+      model:  ViT-H/14
+      epsilon: 0
+      delta:  0
+      private_accuracy: 78.0%
+      dp_accountant: N/A
+    - public_data: LAION-2B
+      model:  ViT-G/14
+      epsilon: 0
+      delta:  0
+      private_accuracy: 80.1%
+      dp_accountant: N/A

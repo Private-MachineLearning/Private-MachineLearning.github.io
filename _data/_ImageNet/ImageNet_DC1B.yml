@@ -1,0 +1,23 @@
+- 
+  name: Reproducible scaling laws for contrastive language-image learning
+  url: https://arxiv.org/abs/2212.07143
+  authors: Mehdi Cherti et al.
+  code: https://github.com/mlfoundations/open_clip
+  venue: CVPR, 2023
+  venue_date: 2023-06-17
+  claims:
+    - model: ViT-B/32
+      epsilon: 0
+      delta: 0
+      private_accuracy: 72.8%
+      dp_accountant: N/A
+    - model: ViT-B/16
+      epsilon: 0
+      delta: 0
+      private_accuracy: 73.5%
+      dp_accountant: N/A
+    - model: ViT-L/14
+      epsilon: 0
+      delta: 0
+      private_accuracy: 79.2%
+      dp_accountant: N/A
