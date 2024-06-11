@@ -17,8 +17,9 @@ Submit a new <a href="https://github.com/robust-ml/robust-ml.github.io/issues/ne
     <!-- <a class="btn btn-secondary" href="#MNIST_heading">MNIST</a> -->
     <a class="btn btn-secondary" href="#IMAGENET_heading">ImageNet-1K</a>
     <!-- <a class="btn btn-secondary" href="#ImageNet_CIFAR-100_heading">CIFAR-100 (with public ImageNet-1K)</a> -->
-    <a class="btn btn-secondary" href="#JFT300M_Places365_heading">Places365 (with public JFT300M)</a>
-    <!-- <a class="btn btn-secondary" href="#ImageNet_CheXpert_heading">ImageNet-CheXpert</a> -->
+    <a class="btn btn-secondary" href="#JFT300M_Places365_heading">Places365</a>
+    <a class="btn btn-secondary" href="#CheXpert_heading">CheXpert</a>
+    <a class="btn btn-secondary" href="#EyePACS_heading">EyePACS</a>
 </div>
 
 <!-- <section class="container" id="MNIST_heading"></section>
@@ -46,16 +47,16 @@ Submit a new <a href="https://github.com/robust-ml/robust-ml.github.io/issues/ne
     CIFAR-10 with ImageNet 1k
   </p>
   {% include table.html id="CIFAR-10-IN1k" src=site.data._CIFAR-10.CIFAR10_IN1K published=true %}
-
+<!-- 
   <p class="text-center" style="font-size: 1.25rem;">
     CIFAR-10 with DataComp-1B
   </p>
-  {% include table.html id="CIFAR-10-DC1B" src=site.data._CIFAR-10.CIFAR10_DC1B published=true %}
+  {% include table.html id="CIFAR-10-DC1B" src=site.data._CIFAR-10.CIFAR10_DC1B published=true %} -->
 
   <p class="text-center" style="font-size: 1.25rem;">
     CIFAR-10 with anything goes
   </p>
-  {% include table.html id="CIFAR-10-any" src=site.data._CIFAR-10.CIFAR10_any published=true %}
+  {% include table_any.html id="CIFAR-10-any" src=site.data._CIFAR-10.CIFAR10_any published=true %}
 </section>
 
 <section class="container" id="IMAGENET_heading"> <!-- IMAGENET -->
@@ -65,12 +66,12 @@ Submit a new <a href="https://github.com/robust-ml/robust-ml.github.io/issues/ne
   {% include table.html id="IMAGENET" src=site.data._ImageNet.ImageNet_no published=true %}
 
   <p class="text-center" style="font-size: 1.25rem;">
-    ImageNet-1K (with public JFT300M)
+    ImageNet with public DataComp-1B
   </p>
   {% include table.html id="IMAGENET-DC1B" src=site.data._ImageNet.ImageNet_DC1B published=true %}
 
   <p class="text-center" style="font-size: 1.25rem;">
-    ImageNet-1K (with anything goes)
+    ImageNet with anything goes
   </p>
   {% include table_any.html id="IMAGENET-ANY" src=site.data._ImageNet.ImageNet_any published=true %}
 </section>
@@ -89,12 +90,39 @@ Submit a new <a href="https://github.com/robust-ml/robust-ml.github.io/issues/ne
   {% include table.html id="JFT300M_Places365" src=site.data.JFT300M-Places365 published=true %}
 </section> -->
 
-<!-- <section class="container" id="ImageNet_CheXpert_heading"></section>
+<section class="container" id="CheXpert_heading">
   <p class="text-center" style="font-size: 1.25rem;">
-    ImageNet_CheXpert
+    CheXpert without public data
   </p>
-  {% include table.html id="ImageNet_CheXpert" src=site.data.ImageNet-CheXpert published=true %}
-</section> -->
+  {% include table.html id="CheXpert" src=site.data._CheXpert.CheXpert_no published=true %}
+
+  <p class="text-center" style="font-size: 1.25rem;">
+    CheXpert with ImageNet 1k
+  </p>
+  {% include table.html id="CheXpert-IN1K" src=site.data._CheXpert.CheXpert_IN1K published=true %}
+
+  <p class="text-center" style="font-size: 1.25rem;">
+    CheXpert with anything goes
+  </p>
+  {% include table_any.html id="CheXpert-ANY" src=site.data._CheXpert.CheXpert_any published=true %}
+</section>
+
+<section class="container" id="EyePACS_heading"></section>
+  <p class="text-center" style="font-size: 1.25rem;">
+    EyePACS without public data
+  </p>
+  {% include table.html id="EyePACS" src=site.data._EyePACS.EyePACS_no published=true %}
+
+  <p class="text-center" style="font-size: 1.25rem;">
+    EyePACS with ImageNet 1k
+  </p>
+  {% include table.html id="EyePACS-IN1K" src=site.data._EyePACS.EyePACS_IN1K published=true %}
+
+  <p class="text-center" style="font-size: 1.25rem;">
+    EyePACS with anything goes
+  </p>
+  {% include table_any.html id="EyePACS-ANY" src=site.data._EyePACS.EyePACS_any published=true %}
+</section>
   
 <script>
   $(document).ready(function() {
@@ -104,14 +132,18 @@ Submit a new <a href="https://github.com/robust-ml/robust-ml.github.io/issues/ne
     //CIFAR-10:
     initializeDataTable("CIFAR-10-no");
     initializeDataTable("CIFAR-10-IN1k");
-    initializeDataTable("CIFAR-10-DC1B");
+    // initializeDataTable("CIFAR-10-DC1B");
     initializeDataTable("CIFAR-10-any");
 
     //CheXpert
-
+    initializeDataTable("CheXpert");
+    initializeDataTable("CheXpert-IN1K");
+    initializeDataTable("CheXpert-ANY");
 
     //EyePACS
-
+    initializeDataTable("EyePACS");
+    initializeDataTable("EyePACS-IN1K");
+    initializeDataTable("EyePACS-ANY");
 
     //ImageNet
     initializeDataTable("IMAGENET")
