@@ -1,22 +1,29 @@
 # -
-#   name: Differentially Private Learning Needs Better Features (or Much More Data)
-#   url: https://arxiv.org/abs/2011.11660
-#   authors: Florian Tramèr, Dan Boneh
-#   code: https://github.com/ftramer/Handcrafted-DP
-#   venue: 	ICLR 2021
-#   venue_date: 2021-05-03
+#   name: Tempered Sigmoid Activations for Deep Learning with Differential Privacy
+#   url: https://arxiv.org/abs/2007.14191
+#   authors: Nicolas Papernot, Abhradeep Thakurta, Shuang Song, Steve Chien, Úlfar Erlingsson
+#   code: N/A
+#   venue: Proceedings of the AAAI Conference on Artificial Intelligence
+#   venue_date: 2021-05-18
 #   claims:
-#     - dataset: ScatterNet+linear
-#       epsilon: \epsilon = 3
+#     - model: CNN
+#       epsilon: 7.53
 #       delta:  1e-5
-#       private_accuracy: 67.0% accuracy
-#       dp_accountant: RDP
-#     - dataset: ScatterNet+CNN
-#       epsilon: \epsilon = 3
-#       delta:  1e-5
-#       private_accuracy: 69.3% accuracy
-#       dp_accountant: RDP
+#       private_accuracy:  66.2%
+#       dp_accountant: TFP
 
+#   name: Improving Deep Learning with Differential Privacy using Gradient Encoding and Denoising
+#   url: https://arxiv.org/abs/2007.11524
+#   authors: Milad Nasr, Reza Shokri, Amir houmansadr
+#   code: N/A
+#   venue: arXiv, Jul. 2020
+#   venue_date: 2020-07-22
+#   claims:
+#     - model: DNN
+#       epsilon: 3
+#       delta:  1e-5
+#       private_accuracy: 55.0%
+#       dp_accountant: RDP
 -
   name: Differentially Private Learning Needs Better Features (or Much More Data)
   url: https://arxiv.org/abs/2011.11660
@@ -25,7 +32,7 @@
   venue: 	ICLR 2021
   venue_date: 2021-05-03
   claims:
-    - model: ScatterNet+linear
+    - model: ScatterNet + Linear
       epsilon: 3
       delta:  1e-5
       private_accuracy: 67.0%
@@ -35,7 +42,7 @@
         #   citation: CW16
         #   url: https://arxiv.org/abs/1608.04644
         #   code: https://github.com/lengstrom/defensive-distillation
-    - model: ScatterNet+CNN
+    - model: ScatterNet + CNN
       epsilon: 3
       delta:  1e-5
       private_accuracy: 69.3%

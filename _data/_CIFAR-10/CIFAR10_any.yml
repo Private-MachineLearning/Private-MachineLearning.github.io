@@ -1,0 +1,20 @@
+- 
+  name: Rethinking Benchmarks for Differentially Private Image Classification
+  url: N/A
+  authors: Mokhtari, Kodeiri, Mohaptra, et al.
+  code: N/A
+  venue: NeuralIPS, 2024
+  venue_date: 2024-06-08
+  claims:
+    - public_data: LAION-2B
+      model: Vit-G/14 + TLNN 
+      epsilon: 0
+      delta:  0
+      private_accuracy: 99.75%
+      dp_accountant: N/A
+    - public_data: WebImageTex
+      model: Vit-B/16 + TLNN 
+      epsilon: 0
+      delta:  0
+      private_accuracy: 87.14% AUC
+      dp_accountant: N/A
