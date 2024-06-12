@@ -7,7 +7,7 @@ title: FAQ
 
 ## How are new models and methods added to the list?
 
-This website is [open-source][source] and welcomes updates from the community. Please open an [issue][issues] or submit
+This website is [open-source][source] and welcomes updates from the community. Please open an [issue][issues] using the "Submit Report" template or submit
 a [pull request][pulls] with proposed changes.
 
 
